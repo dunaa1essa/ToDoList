@@ -1,19 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 // import TaskForm from './componts/TaskForm';
 // import TaskList from './componts/TaskList';
-import Login from './componts/login/login';
-import axios from 'axios';
+// import axios from 'axios';
+import ShowUser from './componts/user/showUser';
+import AddUser from './componts/user/addUser';
+// import Login from './componts/user/login';
 
 
 
 const App = () => {
 
-  const apiCall = () => {
-    axios.get('http://localhost:8080').then((data) => {
-      //this console.log will be in our frontend console
-      console.log(data)
-    })
-  }
+  const [data, setData] = useState([]);
+
+  const handleDataSubmit = (newData) => {
+    setData([...data, newData]);
+  };
 
 
   // const [tasks, setTasks] = useState([]);
@@ -31,12 +32,9 @@ const App = () => {
       {/* <h1>To Do List</h1>
       <TaskForm addTask={addTask} />
       <TaskList tasks={tasks} deleteAllTasks={deleteAllTasks} /> */}
-        <header className="App-header">
-
-<button onClick={apiCall}>Make API Call</button>
-
-</header>
-      <Login/>
+     {/* <Login/> */}
+     <AddUser onDataSubmit={handleDataSubmit}/>
+      <ShowUser data={data}/>
    
 
     </div>

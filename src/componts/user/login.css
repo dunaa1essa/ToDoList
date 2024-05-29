@@ -1,0 +1,67 @@
+.table{
+    display: grid;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    
+}
+.user-list-title{
+    color: black;
+    font-size: 15px;
+    cursor: pointer;
+}
+.user-list-value{
+    color: black;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+}
+.user-list-value img{
+    width: 2rem;
+    height: 2rem;
+}
+
+
+.log-in {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: grid;
+}
+.log-in-container{
+   place-self: start;
+    width: max(23vw,330px);
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px 30px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+.log-in .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+}
+.log-in-input{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.log-in-input input{
+    outline: none;
+    border: 1px solid #c9c9c9;
+    padding:10px ;
+    border-radius: 4px;
+}
+.log-in-container button{
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    color: black;
+    font-size: 15px;
+    cursor: pointer;
+}
